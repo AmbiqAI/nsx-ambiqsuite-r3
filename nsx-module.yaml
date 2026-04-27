@@ -1,44 +1,37 @@
 schema_version: 1
-
 module:
   name: nsx-ambiqsuite-r3
   type: sdk_provider
   category: sdk_provider
   provider: ambiqsuite-r3
-  version: "0.1.0"
-
+  version: 0.1.1
 support:
   ambiqsuite: true
   zephyr: false
-
-summary: AmbiqSuite r3 SDK provider selection for Apollo3 and Apollo3P based NSX targets.
-
+summary: >-
+  AmbiqSuite r3 SDK provider selection for Apollo3 and Apollo3P based NSX
+  targets.
 capabilities:
   - sdk_provider
   - ambiqsuite
   - apollo3_family
-
 use_cases:
   - choose the SDK baseline for Apollo3 or Apollo3P apps
   - provide upstream SDK content for r3-based platform stacks
   - foundation for r3 HAL and BSP layers
-
 agent_keywords:
   - ambiqsuite
   - r3
   - sdk
   - provider
-
 build:
   cmake:
     package: nsx_soc_apollo3p
     targets:
       - nsx::sdk_ambiqsuite_r3
-
 depends:
   required: []
   optional: []
-
 compatibility:
   boards:
     - apollo3_evb
@@ -51,5 +44,4 @@ compatibility:
   toolchains:
     - arm-none-eabi-gcc
     - armclang
-
     - atfe
